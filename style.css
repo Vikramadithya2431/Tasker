@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c550d2, #4540ad, #45afc2);
+    padding: 20px;
+}
+.taskBox {
+    height: 60%;
+    width: auto;
+    max-width: 540px;
+    margin: 20px auto 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+h1 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #4cd698;
+}
+.addTasks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d2d0d0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    outline: none;
+    flex:1;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+    font-size: 16px;
+}
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height:24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url(images/circle.svg);
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 11px;
+}
+ul li.checked {
+    text-decoration: line-through;
+    color: #b1acac;
+}
+ul li.checked::before {
+    background-image: url(images/check-circle.svg);
+    background-size: cover;
+    background-position: center;
+    top: 11px;
+    left: 11px;
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 45px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 30%;
+}
+ul li span:hover {
+    background: #c74a3c;
+    color: #fff;
+}

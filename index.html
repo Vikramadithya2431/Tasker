@@ -2,12 +2,25 @@
 <html>
 <head>
     <title>Tasker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <center>
-        <div>
-            <p>Add or Cross off tasks.</p>
+    <div class="container">
+        <div class="taskBox">
+            <br><h1>Welcome to Tasker!</h1><br>
+            <h3 style="text-align: center;">Add or Cross off tasks <img src="images/checks.svg" height="20px" width="20px" style="vertical-align: middle;"></h3>
+            <br>
+            <div class="addTasks">
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+                <button onclick="addTask()"><img src="images/plus-circle.svg" height="40px" width="40px" style="vertical-align: middle;"></button>
+            </div>
+            <ul id="taskList">
+                <!--<li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
         </div>
-    </center>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
