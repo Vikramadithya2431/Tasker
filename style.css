@@ -138,7 +138,8 @@ ul li span:hover {
 }
 #progressMessage {
     margin-top: 10px;
-    color: #fdfcfb;
+    color: #941a67;
     font-family: Arial, sans-serif;
+    font-size: 16px;
     text-align: center;
 }
