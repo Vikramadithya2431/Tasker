@@ -12,6 +12,7 @@ function addTask() {
     let span = document.createElement("span");
     span.innerHTML = "\u00D7";
     li.appendChild(span);
+
     totalTasksCreated++;
     increaseProgress();
   }
@@ -21,6 +22,7 @@ function addTask() {
 taskList.addEventListener("click", function(e) {
     const li = e.target.closest("li");
     if (!li || !taskList.contains(li)) return;
+
     // Delete a task
     if (e.target.tagName === "SPAN") {
         if (!li.classList.contains("checked")) {
@@ -31,6 +33,7 @@ taskList.addEventListener("click", function(e) {
         saveTasks();
         return;
     }
+
     // Complete a task only once
     if (e.target.tagName === "LI" &&
         !li.classList.contains("checked")) {
@@ -38,6 +41,7 @@ taskList.addEventListener("click", function(e) {
         completedTasks++;
         increaseProgress();
         saveTasks();
+
         setTimeout(() => {
             li.classList.add("fade-out");
             setTimeout(() => {
@@ -93,7 +97,7 @@ function increaseProgress() {
             localStorage.removeItem("totalTasksCreated");
             localStorage.removeItem("completedTasks");
             progressMessage.textContent = "";
-        }, 2500);
+        }, 2200);
         return;
     }
     progressMessage.textContent = "";
