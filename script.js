@@ -1,5 +1,11 @@
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
+taskInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Optional: Prevent default browser behavior
+        addTask();
+    }
+});
 function addTask() {
   if(taskInput.value === '')
   {
@@ -17,6 +23,7 @@ function addTask() {
     increaseProgress();
   }
   taskInput.value = '';
+  document.getElementById("progress-bar-container").style.display = "block";
   saveTasks();
 }
 taskList.addEventListener("click", function(e) {
@@ -93,6 +100,7 @@ function increaseProgress() {
             totalTasksCreated = 0;
             completedTasks = 0;
             progressBar.style.width = "0%";
+            document.getElementById("progress-bar-container").style.display = "none";
             localStorage.removeItem("task");
             localStorage.removeItem("totalTasksCreated");
             localStorage.removeItem("completedTasks");
