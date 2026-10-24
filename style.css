@@ -13,12 +13,19 @@
 .taskBox {
     height: 60%;
     width: auto;
-    max-width: 540px;
+    max-width: 580px;
+    max-height: 615px;
     margin: 20px auto 20px;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+}
+.listBox {
+    height: 20%;
+    max-height: 405px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
 }
 h1 {
     font-family: Arial, sans-serif;
@@ -26,6 +33,7 @@ h1 {
     color: #4cd698;
 }
 .addTasks {
+    height: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +62,7 @@ button {
 ul li {
     list-style: none;
     font-size: 17px;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 40px 12px 50px;
     user-select: none;
     cursor: pointer;
     position: relative;
@@ -109,7 +117,7 @@ ul li span {
     position: absolute;
     right: 0;
     top: 5px;
-    width: 45px;
+    width: 40px;
     height: 40px;
     font-size: 22px;
     color: #555;
@@ -127,8 +135,8 @@ ul li span:hover {
     height: 30px;
     margin: 15px auto 5px;
     border-radius: 15px;
+    display: none;
 }
-
 .progress {
     width: 0%;
     height: 100%;
@@ -138,7 +146,7 @@ ul li span:hover {
 }
 #progressMessage {
     margin-top: 10px;
-    color: #941a67;
+    color: #dcee3b;
     font-family: Arial, sans-serif;
     font-size: 16px;
     text-align: center;
