@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasker</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -14,13 +16,15 @@
                 <input type="text" id="taskInput" placeholder="Add a new task...">
                 <button onclick="addTask()"><img src="images/plus-circle.svg" height="40px" width="40px" style="vertical-align: middle;"></button>
             </div>
-            <ul id="taskList">
-                <!--<li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>-->
-            </ul>
+            <div class="listBox">
+                    <ul id="taskList">
+                    <!--<li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>-->
+                </ul>
+            </div>
         </div>
-        <div class="progress-bar">
+        <div id="progress-bar-container" class="progress-bar">
             <div id="progress" class="progress"></div>
             <div id="progressMessage"></div>
         </div>
